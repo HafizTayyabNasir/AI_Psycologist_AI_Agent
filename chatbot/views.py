@@ -27,7 +27,6 @@ def chatbot_view(request):
         {"initial_bot_message": get_orchestrator_welcome()}
     )
 
-@login_required
 @csrf_exempt
 def ask_gemini_view(request):
     client = get_groq_client()
