@@ -99,6 +99,10 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
+# Use signed cookies for sessions to avoid database writes on serverless (Vercel)
+SESSION_ENGINE = "django.contrib.sessions.backends.signed_cookies"
+
+
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'

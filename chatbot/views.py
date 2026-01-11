@@ -11,7 +11,6 @@ from .agent_utils import get_groq_client, get_user_session, save_user_session
 from .orchestrator_agent import get_welcome_message as get_orchestrator_welcome, process_message as process_orchestrator_message
 from .interview_agent import get_welcome_message as get_interview_welcome
 
-@login_required
 def chatbot_view(request):
     session_data = get_user_session(request)
     session_data["current_agent"] = "orchestrator"
@@ -113,7 +112,6 @@ def ask_gemini_view(request):
             status=500,
         )
 
-@login_required
 def download_safety_plan(request):
     session_data = get_user_session(request)
     pdf_base64 = session_data.get("safety_plan_pdf")
