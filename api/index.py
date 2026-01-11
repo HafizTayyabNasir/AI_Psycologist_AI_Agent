@@ -7,6 +7,4 @@ sys.path.insert(0, str(BASE_DIR))
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'elvion_project.settings')
 
-from django.core.wsgi import get_wsgi_application
-
-application = get_wsgi_application()
+from django_vercel import handler
