@@ -4,7 +4,6 @@ import traceback
 from django.shortcuts import render
 from django.http import JsonResponse, HttpResponse
 from django.views.decorators.csrf import csrf_exempt
-from django.contrib.auth.decorators import login_required
 from PIL import Image
 import io
 
