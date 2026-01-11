@@ -1,0 +1,6 @@
+Django>=5.2.3
+python-dotenv>=1.1.1
+groq>=0.4.0
+Pillow>=10.0.0
+reportlab>=4.0.0
+
